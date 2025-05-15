@@ -101,16 +101,12 @@
                     var tTime = " 총 시간 : "
                         + (resultData[0].properties.totalTime / 60)
                             .toFixed(0) + "분,";
-                    var tFare = " 총 요금 : "
-                        + resultData[0].properties.totalFare
-                        + "원,";
                     var taxiFare = " 예상 택시 요금 : "
                         + resultData[0].properties.taxiFare
                         + "원";
 
                     $("#result").text(
-                        tDistance + tTime + tFare
-                        + taxiFare);
+                        tDistance + tTime + taxiFare);
 
                     //교통정보 표출 옵션값을 체크
                     if (trafficInfochk == "Y") {
@@ -414,6 +410,7 @@
 </head>
 
 <body onload="initTmap();">
+    <h1> 여보 출근 시간 안내 </h1>
     <div id="map_div" style="width:100%;height:400px;"></div>
     <p id="result"></p>
 </body>
